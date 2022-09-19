@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import MonthTable from './components/MonthTable';
+import MayMonthTable from './components/MayMonthTable';
 import { useState, useEffect } from 'react'
 import { fetchTransactionMockData } from './mockdata/transactionMockData';
 
@@ -27,12 +26,12 @@ function App() {
       }
     })
   })()
-  const sortedMayTable = () => mayTable.sort((a, b) => a.customerID - b.customerID)
+  const sortedMayTable = () => mayTable.sort((a, b) => new Date(a.purchasedDate) - new Date(b.purchasedDate))
 
   console.log(sortedMayTable())
   return (
     <div className="App">
-      <MonthTable
+      <MayMonthTable
         sortedMayTable={sortedMayTable}
       />
     </div>
