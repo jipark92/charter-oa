@@ -1,31 +1,23 @@
 import './css//App.css';
 import MayMonthTable from './components/MayMonthTable';
-import { useState, useEffect } from 'react'
-import { fetchTransactionMockData } from './mockdata/transactionMockData';
 import JuneMonthTable from './components/JuneMonthTable';
 import JulyMonthTable from './components/JulyMonthTable';
-
+import { useIsLoadingAndFetchData } from './hooks/useIsLoadingAndFetchData'
 
 function App() {
 
-  const [transactionData, setTransactionData] = useState([])
+  //custom hook loading and fetch 
+  const { isLoading, transactionMockData } = useIsLoadingAndFetchData()
 
-  useEffect(() => {
-    fetchTransactionMockData()
-      .then((res) => {
-        setTransactionData(res)
-      })
-  }, [])
-
-
+  //categorize table array
   const mayTable = []
   const juneTable = []
   const julyTable = []
 
   //find may data
   const findMayDateAndCustomerID = (() => {
-    transactionData.map((data) => {
-      if (data.customerID && new Date(data.purchasedDate).getMonth().toString() === "4") {
+    transactionMockData.map((data) => {
+      if (data.customerID && new Date(data.purchasedDate).getMonth() + 1 === 5) {
         mayTable.push(data)
       }
     })
@@ -34,19 +26,18 @@ function App() {
 
   //find june data
   const findJuneDateAndCustomerID = (() => {
-    transactionData.map((data) => {
-      if (data.customerID && new Date(data.purchasedDate).getMonth().toString() === "5") {
+    transactionMockData.map((data) => {
+      if (data.customerID && new Date(data.purchasedDate).getMonth() + 1 === 6) {
         juneTable.push(data)
       }
     })
   })()
   const sortedJuneTable = () => juneTable.sort((a, b) => new Date(a.purchasedDate) - new Date(b.purchasedDate))
 
-
   //find july data
   const findJulyDateAndCustomerID = (() => {
-    transactionData.map((data) => {
-      if (data.customerID && new Date(data.purchasedDate).getMonth().toString() === "6") {
+    transactionMockData.map((data) => {
+      if (data.customerID && new Date(data.purchasedDate).getMonth() + 1 === 7) {
         julyTable.push(data)
       }
     })
@@ -55,15 +46,18 @@ function App() {
 
   return (
     <div className="App">
-      <MayMonthTable
-        sortedMayTable={sortedMayTable}
-      />
-      <JuneMonthTable
-        sortedJuneTable={sortedJuneTable}
-      />
-      <JulyMonthTable
-        sortedJulyTable={sortedJulyTable}
-      />
+      {!isLoading ?
+        <section>
+          <MayMonthTable
+            sortedMayTable={sortedMayTable}
+          />
+          <JuneMonthTable
+            sortedJuneTable={sortedJuneTable}
+          />
+          <JulyMonthTable
+            sortedJulyTable={sortedJulyTable}
+          />
+        </section> : "loading"}
     </div>
   );
 }
