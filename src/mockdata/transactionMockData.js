@@ -95,14 +95,21 @@ const transactionMockData = [
         customerID: 789,
         price: 89,
         rewardPoints: calculateRewardPoints(89),
-        purchasedDate: new Date("July 15, 22 ").toDateString(),
+        purchasedDate: new Date("July 14, 22 ").toDateString(),
     },
     {
         transactionID: 13,
         customerID: 123,
         price: 152,
         rewardPoints: calculateRewardPoints(152),
-        purchasedDate: new Date("May 15, 22 ").toDateString(),
+        purchasedDate: new Date("May 13, 22 ").toDateString(),
+    },
+    {
+        transactionID: 14,
+        customerID: 789,
+        price: 1231,
+        rewardPoints: calculateRewardPoints(1231),
+        purchasedDate: new Date("May 13, 22 ").toDateString(),
     },
 ];
 
