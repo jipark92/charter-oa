@@ -9,7 +9,7 @@ function App() {
   //custom hook loading and fetch 
   const { isLoading, transactionMockData } = useIsLoadingAndFetchData()
 
-  //categorize table array
+  //categorized table array
   const mayTable = []
   const juneTable = []
   const julyTable = []
@@ -43,6 +43,13 @@ function App() {
     })
   })()
   const sortedJulyTable = () => julyTable.sort((a, b) => new Date(a.purchasedDate) - new Date(b.purchasedDate))
+
+  //calcualte total reward points
+  const calculateTotalRewards = (customer) => {
+    //TODO: work on total
+  }
+  calculateTotalRewards(123)
+  // console.log(calculateTotalRewards())
 
   return (
     <div className="App">

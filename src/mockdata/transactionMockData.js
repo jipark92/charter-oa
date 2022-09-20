@@ -1,3 +1,4 @@
+//calculate reward points from price
 export const calculateRewardPoints = (price) => {
     const moreThan50 = 1
     const moreThan100 = 2
@@ -105,6 +106,7 @@ const transactionMockData = [
     },
 ];
 
+//mimic fetch
 export const fetchTransactionMockData = () => {
     return new Promise((res, rej) => {
         setTimeout(() => {

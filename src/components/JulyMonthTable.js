@@ -3,7 +3,7 @@ import React from 'react'
 export default function JulyMonthTable({ sortedJulyTable }) {
     return (
         <div>
-            <h1>JUNE</h1>
+            <h1>JULY</h1>
             {/* customer 123 */}
             <table border="1">
                 <thead>
