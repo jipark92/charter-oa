@@ -118,6 +118,6 @@ export const fetchTransactionMockData = () => {
     return new Promise((res, rej) => {
         setTimeout(() => {
             res(transactionMockData)
-        }, 1000);
+        }, 900);
     })
 }

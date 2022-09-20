@@ -2,11 +2,11 @@ import React from 'react'
 
 export default function MayMonthTable({ sortedMayTable, calculateMayTotalRewards }) {
     return (
-        <div>
+        <div  >
             <h1>MAY</h1>
             {/* customer 123 */}
-            <table border="1">
-                <thead>
+            <table border="1"  >
+                <thead >
                     <tr>
                         <th>Customer ID</th>
                         <th>Transaction ID</th>
@@ -37,7 +37,7 @@ export default function MayMonthTable({ sortedMayTable, calculateMayTotalRewards
             </table>
 
             {/* customer 456 */}
-            <table border="1">
+            <table border="1"  >
                 <thead>
                     <tr>
                         <th>Customer ID</th>
@@ -69,7 +69,7 @@ export default function MayMonthTable({ sortedMayTable, calculateMayTotalRewards
             </table>
 
             {/* customer 789 */}
-            <table border="1">
+            <table border="1"  >
                 <thead>
                     <tr>
                         <th>Customer ID</th>
@@ -99,6 +99,6 @@ export default function MayMonthTable({ sortedMayTable, calculateMayTotalRewards
                     </tr>
                 </tbody>
             </table>
-        </div>
+        </div >
     )
 }

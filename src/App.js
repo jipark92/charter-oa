@@ -84,7 +84,7 @@ function App() {
   return (
     <div className="App">
       {!isLoading ?
-        <section>
+        <section data-testid='app-components'>
           <MayMonthTable
             sortedMayTable={sortedMayTable}
             calculateMayTotalRewards={calculateMayTotalRewards}
@@ -97,7 +97,7 @@ function App() {
             sortedJulyTable={sortedJulyTable}
             calculateJulyTotalRewards={calculateJulyTotalRewards}
           />
-        </section> : <p>LOADING DATA......</p>}
+        </section> : <p data-testid='loading-data'>LOADING DATA......</p>}
     </div>
   );
 }

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="App"
+  >
+    <p
+      data-testid="loading-data"
+    >
+      LOADING DATA......
+    </p>
+  </div>
+</DocumentFragment>
+`;

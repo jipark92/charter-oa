@@ -4,17 +4,17 @@
 
 Reward Points is an online-assessment from Charter Communication that needs to be completed in order to evaluate candidate's React coding skill. 
 
-There are some requirements that needs to be met for the OA to be considered complete:
+There are some requirements in order for the assessment be considered complete:
     
     -GET Rewards,Customer ID, and Transacions.
-    -Create your own data.
-    -Create your own fetch function that mimics fetch API.
+    -Create transaction data.
+    -Create fetch function.
     -Create reusuable Custom Hooks.
     -Variable Naming Convention.
     -Organized folders.(css in css folder, components in components folder, etc...)
     -Avoid unneccessary 3rd-party libraries.
     -Unit Testing.
-    -*NO COPY AND PASTING.(WILL BE CHECKED)*
+    -*NO COPY AND PASTING.*
 
 # HOW TO INSTALL AND USE:
 
