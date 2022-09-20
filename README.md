@@ -9,11 +9,11 @@ There are some requirements that needs to be met for the OA to be considered com
     -GET Rewards,Customer ID, and Transacions.
     -Create your own fetch function that mimics fetch API.
     -Variable Naming Convention.
-    -Organized folders(css in css folder, components in components folder, etc...).
-    -Create Custom Reusuable Hooks.
+    -Organized folders.(css in css folder, components in components folder, etc...)
+    -Create reusuable Custom Hooks.
     -Avoid unneccessary 3rd-party libraries.
     -Unit Testing.
-    -*NO COPY AND PASTING PUBLIC SOLUTIONS(WILL BE CHECKED)*
+    -*NO COPY AND PASTING.(WILL BE CHECKED)*
 
 # HOW TO INSTALL AND USE:
 

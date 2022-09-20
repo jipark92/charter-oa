@@ -2,7 +2,6 @@ import './css/App.css';
 import MayMonthTable from './components/MayMonthTable';
 import JuneMonthTable from './components/JuneMonthTable';
 import JulyMonthTable from './components/JulyMonthTable';
-import { useState } from 'react'
 import { useIsLoadingAndFetchData } from './hooks/useIsLoadingAndFetchData'
 
 function App() {
@@ -81,7 +80,6 @@ function App() {
       return total + pointsArr
     }, 0)
   }
-
 
   return (
     <div className="App">
