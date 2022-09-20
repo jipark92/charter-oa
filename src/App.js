@@ -45,18 +45,43 @@ function App() {
   })()
   const sortedJulyTable = () => julyTable.sort((a, b) => new Date(a.purchasedDate) - new Date(b.purchasedDate))
 
-  //calcualte total reward points
-  const calculateTotalRewards = (customer) => {
-    const rewardPointsArr = []
+  //calcualte may total reward points
+  const calculateMayTotalRewards = (customer) => {
+    const mayRewardPointsArr = []
     mayTable.map((data) => {
       if (data.customerID === customer) {
-        rewardPointsArr.push(data.rewardPoints)
+        mayRewardPointsArr.push(data.rewardPoints)
       }
     })
-    return rewardPointsArr.reduce((total, pointsArr) => {
+    return mayRewardPointsArr.reduce((total, pointsArr) => {
       return total + pointsArr
     }, 0)
   }
+  //calcualte june total reward points
+  const calculateJuneTotalRewards = (customer) => {
+    const juneRewardPointsArr = []
+    juneTable.map((data) => {
+      if (data.customerID === customer) {
+        juneRewardPointsArr.push(data.rewardPoints)
+      }
+    })
+    return juneRewardPointsArr.reduce((total, pointsArr) => {
+      return total + pointsArr
+    }, 0)
+  }
+  //calcualte july total reward points
+  const calculateJulyTotalRewards = (customer) => {
+    const julyRewardPointsArr = []
+    julyTable.map((data) => {
+      if (data.customerID === customer) {
+        julyRewardPointsArr.push(data.rewardPoints)
+      }
+    })
+    return julyRewardPointsArr.reduce((total, pointsArr) => {
+      return total + pointsArr
+    }, 0)
+  }
+
 
   return (
     <div className="App">
@@ -64,15 +89,15 @@ function App() {
         <section>
           <MayMonthTable
             sortedMayTable={sortedMayTable}
-            calculateTotalRewards={calculateTotalRewards}
+            calculateMayTotalRewards={calculateMayTotalRewards}
           />
           <JuneMonthTable
             sortedJuneTable={sortedJuneTable}
-            calculateTotalRewards={calculateTotalRewards}
+            calculateJuneTotalRewards={calculateJuneTotalRewards}
           />
           <JulyMonthTable
             sortedJulyTable={sortedJulyTable}
-            calculateTotalRewards={calculateTotalRewards}
+            calculateJulyTotalRewards={calculateJulyTotalRewards}
           />
         </section> : <p>LOADING DATA......</p>}
     </div>
