@@ -2,6 +2,7 @@ import './css/App.css';
 import MayMonthTable from './components/MayMonthTable';
 import JuneMonthTable from './components/JuneMonthTable';
 import JulyMonthTable from './components/JulyMonthTable';
+import { useState } from 'react'
 import { useIsLoadingAndFetchData } from './hooks/useIsLoadingAndFetchData'
 
 function App() {
@@ -46,10 +47,16 @@ function App() {
 
   //calcualte total reward points
   const calculateTotalRewards = (customer) => {
-    //TODO: work on total
+    const rewardPointsArr = []
+    mayTable.map((data) => {
+      if (data.customerID === customer) {
+        rewardPointsArr.push(data.rewardPoints)
+      }
+    })
+    return rewardPointsArr.reduce((total, pointsArr) => {
+      return total + pointsArr
+    }, 0)
   }
-  calculateTotalRewards(123)
-  // console.log(calculateTotalRewards())
 
   return (
     <div className="App">
@@ -57,12 +64,15 @@ function App() {
         <section>
           <MayMonthTable
             sortedMayTable={sortedMayTable}
+            calculateTotalRewards={calculateTotalRewards}
           />
           <JuneMonthTable
             sortedJuneTable={sortedJuneTable}
+            calculateTotalRewards={calculateTotalRewards}
           />
           <JulyMonthTable
             sortedJulyTable={sortedJulyTable}
+            calculateTotalRewards={calculateTotalRewards}
           />
         </section> : <p>LOADING DATA......</p>}
     </div>

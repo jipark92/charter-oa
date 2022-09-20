@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function MayMonthTable({ sortedMayTable }) {
+export default function MayMonthTable({ sortedMayTable, calculateTotalRewards }) {
     return (
         <div>
             <h1>MAY</h1>
@@ -31,7 +31,7 @@ export default function MayMonthTable({ sortedMayTable }) {
                     })}
                     <tr>
                         <td colSpan="4"><b>TOTAL REWARDS</b></td>
-                        <td><b>0</b></td>
+                        <td><b>{calculateTotalRewards(123)}</b></td>
                     </tr>
                 </tbody>
             </table>
@@ -63,7 +63,7 @@ export default function MayMonthTable({ sortedMayTable }) {
                     })}
                     <tr>
                         <td colSpan="4"><b>TOTAL REWARDS</b></td>
-                        <td><b>0</b></td>
+                        <td><b>{calculateTotalRewards(456)}</b></td>
                     </tr>
                 </tbody>
             </table>
@@ -95,7 +95,7 @@ export default function MayMonthTable({ sortedMayTable }) {
                     })}
                     <tr>
                         <td colSpan="4"><b>TOTAL REWARDS</b></td>
-                        <td><b>0</b></td>
+                        <td><b>{calculateTotalRewards(789)}</b></td>
                     </tr>
                 </tbody>
             </table>

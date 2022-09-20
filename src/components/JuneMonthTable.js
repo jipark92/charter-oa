@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function JuneMonthTable({ sortedJuneTable }) {
+export default function JuneMonthTable({ sortedJuneTable, calculateTotalRewards }) {
     return (
         <div>
             <h1>JUNE</h1>
