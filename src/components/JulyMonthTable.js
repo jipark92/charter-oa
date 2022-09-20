@@ -9,6 +9,7 @@ export default function JulyMonthTable({ sortedJulyTable }) {
                 <thead>
                     <tr>
                         <th>Customer ID</th>
+                        <th>Transaction ID</th>
                         <th>Date</th>
                         <th>Price</th>
                         <th>Rewards</th>
@@ -20,6 +21,7 @@ export default function JulyMonthTable({ sortedJulyTable }) {
                             return (
                                 <tr key={i}>
                                     <td>{data.customerID}</td>
+                                    <td>{data.transactionID}</td>
                                     <td>{data.purchasedDate}</td>
                                     <td>${data.price}</td>
                                     <td>{data.rewardPoints}</td>
@@ -28,8 +30,8 @@ export default function JulyMonthTable({ sortedJulyTable }) {
                         }
                     })}
                     <tr>
-                        <td colSpan="3">TOTAL REWARDS</td>
-                        <td>0</td>
+                        <td colSpan="4"><b>TOTAL REWARDS</b></td>
+                        <td><b>0</b></td>
                     </tr>
                 </tbody>
             </table>
@@ -39,6 +41,7 @@ export default function JulyMonthTable({ sortedJulyTable }) {
                 <thead>
                     <tr>
                         <th>Customer ID</th>
+                        <th>Transaction ID</th>
                         <th>Date</th>
                         <th>Price</th>
                         <th>Rewards</th>
@@ -50,6 +53,7 @@ export default function JulyMonthTable({ sortedJulyTable }) {
                             return (
                                 <tr key={i}>
                                     <td>{data.customerID}</td>
+                                    <td>{data.transactionID}</td>
                                     <td>{data.purchasedDate}</td>
                                     <td>${data.price}</td>
                                     <td>{data.rewardPoints}</td>
@@ -58,8 +62,8 @@ export default function JulyMonthTable({ sortedJulyTable }) {
                         }
                     })}
                     <tr>
-                        <td colSpan="3">TOTAL REWARDS</td>
-                        <td>0</td>
+                        <td colSpan="4"><b>TOTAL REWARDS</b></td>
+                        <td><b>0</b></td>
                     </tr>
                 </tbody>
             </table>
@@ -69,6 +73,7 @@ export default function JulyMonthTable({ sortedJulyTable }) {
                 <thead>
                     <tr>
                         <th>Customer ID</th>
+                        <th>Transaction ID</th>
                         <th>Date</th>
                         <th>Price</th>
                         <th>Rewards</th>
@@ -80,6 +85,7 @@ export default function JulyMonthTable({ sortedJulyTable }) {
                             return (
                                 <tr key={i}>
                                     <td>{data.customerID}</td>
+                                    <td>{data.transactionID}</td>
                                     <td>{data.purchasedDate}</td>
                                     <td>${data.price}</td>
                                     <td>{data.rewardPoints}</td>
@@ -88,8 +94,8 @@ export default function JulyMonthTable({ sortedJulyTable }) {
                         }
                     })}
                     <tr>
-                        <td colSpan="3">TOTAL REWARDS</td>
-                        <td>0</td>
+                        <td colSpan="4"><b>TOTAL REWARDS</b></td>
+                        <td><b>0</b></td>
                     </tr>
                 </tbody>
             </table>

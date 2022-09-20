@@ -1,4 +1,4 @@
-import './css//App.css';
+import './css/App.css';
 import MayMonthTable from './components/MayMonthTable';
 import JuneMonthTable from './components/JuneMonthTable';
 import JulyMonthTable from './components/JulyMonthTable';
@@ -57,7 +57,7 @@ function App() {
           <JulyMonthTable
             sortedJulyTable={sortedJulyTable}
           />
-        </section> : "loading"}
+        </section> : <p>LOADING DATA......</p>}
     </div>
   );
 }
