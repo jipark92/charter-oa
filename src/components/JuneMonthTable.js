@@ -31,7 +31,7 @@ export default function JuneMonthTable({ sortedJuneTable, calculateJuneTotalRewa
                     })}
                     <tr>
                         <td colSpan="4"><b>TOTAL REWARDS</b></td>
-                        <td><b>{calculateJuneTotalRewards(123)}</b></td>
+                        <td><b><i>{calculateJuneTotalRewards(123)}</i></b></td>
                     </tr>
                 </tbody>
             </table>
@@ -63,7 +63,7 @@ export default function JuneMonthTable({ sortedJuneTable, calculateJuneTotalRewa
                     })}
                     <tr>
                         <td colSpan="4"><b>TOTAL REWARDS</b></td>
-                        <td><b>{calculateJuneTotalRewards(456)}</b></td>
+                        <td><b><i>{calculateJuneTotalRewards(456)}</i></b></td>
                     </tr>
                 </tbody>
             </table>
@@ -95,7 +95,7 @@ export default function JuneMonthTable({ sortedJuneTable, calculateJuneTotalRewa
                     })}
                     <tr>
                         <td colSpan="4"><b>TOTAL REWARDS</b></td>
-                        <td><b>{calculateJuneTotalRewards(789)}</b></td>
+                        <td><b><i>{calculateJuneTotalRewards(789)}</i></b></td>
                     </tr>
                 </tbody>
             </table>

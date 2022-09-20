@@ -31,7 +31,7 @@ export default function MayMonthTable({ sortedMayTable, calculateMayTotalRewards
                     })}
                     <tr>
                         <td colSpan="4"><b>TOTAL REWARDS</b></td>
-                        <td><b>{calculateMayTotalRewards(123)}</b></td>
+                        <td><b><i>{calculateMayTotalRewards(123)}</i></b></td>
                     </tr>
                 </tbody>
             </table>
@@ -63,7 +63,7 @@ export default function MayMonthTable({ sortedMayTable, calculateMayTotalRewards
                     })}
                     <tr>
                         <td colSpan="4"><b>TOTAL REWARDS</b></td>
-                        <td><b>{calculateMayTotalRewards(456)}</b></td>
+                        <td><b><i>{calculateMayTotalRewards(456)}</i></b></td>
                     </tr>
                 </tbody>
             </table>
@@ -95,7 +95,7 @@ export default function MayMonthTable({ sortedMayTable, calculateMayTotalRewards
                     })}
                     <tr>
                         <td colSpan="4"><b>TOTAL REWARDS</b></td>
-                        <td><b>{calculateMayTotalRewards(789)}</b></td>
+                        <td><b><i>{calculateMayTotalRewards(789)}</i></b></td>
                     </tr>
                 </tbody>
             </table>
