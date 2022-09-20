@@ -3,12 +3,7 @@ import '@testing-library/jest-dom';
 import React from 'react';
 import App from './App';
 
-import { MayMonthTable } from './components/MayMonthTable'
-import JuneMonthTable from './components/JuneMonthTable';
-import JulyMonthTable from './components/JulyMonthTable';
-import useIsLoadingAndFetchData from './hooks/useIsLoadingAndFetchData'
-
-describe(App, () => {
+describe('App', () => {
 
     it('should match snapshot', () => {
         const { asFragment } = render(<App />)
