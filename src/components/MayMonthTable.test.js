@@ -3,8 +3,7 @@ import '@testing-library/jest-dom';
 import MayMonthTable from "./MayMonthTable";
 import { transactionMockData } from '../mockdata/transactionMockData'
 
-//Type Error: Cannot read properties of null (reading: useState)
-//so moved the functions in here.
+
 //categorized table array
 const mayTable = []
 
@@ -32,7 +31,7 @@ const calculateMayTotalRewards = (customer) => {
 }
 
 //test
-describe(`MayMonthTable should render customer's may information in tables`, () => {
+describe(`MayMonthTable should render customer's May information in tables`, () => {
 
     it('should match snapshot', () => {
         const { asFragment } = render(<MayMonthTable
@@ -90,6 +89,5 @@ describe(`MayMonthTable should render customer's may information in tables`, () 
         const customer789Total = screen.getByTestId('customer789Total').textContent
         expect(customer789Total).toBe('2512')
     })
-
 
 })

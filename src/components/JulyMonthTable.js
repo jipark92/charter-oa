@@ -3,16 +3,16 @@ import React from 'react'
 export default function JulyMonthTable({ sortedJulyTable, calculateJulyTotalRewards }) {
     return (
         <div>
-            <h1>JULY</h1>
+            <h1 data-testid='header-july'>JULY</h1>
             {/* customer 123 */}
             <table border="1">
                 <thead>
                     <tr>
-                        <th>Customer ID</th>
-                        <th>Transaction ID</th>
-                        <th>Date</th>
-                        <th>Price</th>
-                        <th>Rewards</th>
+                        <th data-testid='th-customerid'>Customer ID</th>
+                        <th data-testid='th-transactionid'>Transaction ID</th>
+                        <th data-testid='th-date'>Date</th>
+                        <th data-testid='th-price'>Price</th>
+                        <th data-testid='th-rewards'>Rewards</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -31,7 +31,7 @@ export default function JulyMonthTable({ sortedJulyTable, calculateJulyTotalRewa
                     })}
                     <tr>
                         <td colSpan="4"><b>TOTAL REWARDS</b></td>
-                        <td><b><i>{calculateJulyTotalRewards(123)}</i></b></td>
+                        <td data-testid='customer123Total'><b><i>{calculateJulyTotalRewards(123)}</i></b></td>
                     </tr>
                 </tbody>
             </table>
@@ -40,11 +40,11 @@ export default function JulyMonthTable({ sortedJulyTable, calculateJulyTotalRewa
             <table border="1">
                 <thead>
                     <tr>
-                        <th>Customer ID</th>
-                        <th>Transaction ID</th>
-                        <th>Date</th>
-                        <th>Price</th>
-                        <th>Rewards</th>
+                        <th data-testid='th-customerid'>Customer ID</th>
+                        <th data-testid='th-transactionid'>Transaction ID</th>
+                        <th data-testid='th-date'>Date</th>
+                        <th data-testid='th-price'>Price</th>
+                        <th data-testid='th-rewards'>Rewards</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -63,7 +63,7 @@ export default function JulyMonthTable({ sortedJulyTable, calculateJulyTotalRewa
                     })}
                     <tr>
                         <td colSpan="4"><b>TOTAL REWARDS</b></td>
-                        <td><b><i>{calculateJulyTotalRewards(456)}</i></b></td>
+                        <td data-testid='customer456Total'><b><i>{calculateJulyTotalRewards(456)}</i></b></td>
                     </tr>
                 </tbody>
             </table>
@@ -72,11 +72,11 @@ export default function JulyMonthTable({ sortedJulyTable, calculateJulyTotalRewa
             <table border="1">
                 <thead>
                     <tr>
-                        <th>Customer ID</th>
-                        <th>Transaction ID</th>
-                        <th>Date</th>
-                        <th>Price</th>
-                        <th>Rewards</th>
+                        <th data-testid='th-customerid'>Customer ID</th>
+                        <th data-testid='th-transactionid'>Transaction ID</th>
+                        <th data-testid='th-date'>Date</th>
+                        <th data-testid='th-price'>Price</th>
+                        <th data-testid='th-rewards'>Rewards</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -95,7 +95,7 @@ export default function JulyMonthTable({ sortedJulyTable, calculateJulyTotalRewa
                     })}
                     <tr>
                         <td colSpan="4"><b>TOTAL REWARDS</b></td>
-                        <td><b><i>{calculateJulyTotalRewards(789)}</i></b></td>
+                        <td data-testid='customer789Total'><b><i>{calculateJulyTotalRewards(789)}</i></b></td>
                     </tr>
                 </tbody>
             </table>

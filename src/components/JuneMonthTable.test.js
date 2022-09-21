@@ -31,7 +31,7 @@ const calculateJuneTotalRewards = (customer) => {
 }
 
 //test
-describe(`JuneMonthTable should render customer's may information in tables`, () => {
+describe(`JuneMonthTable should render customer's June information in tables`, () => {
 
     it('should match snapshot', () => {
         const { asFragment } = render(<JuneMonthTable
@@ -41,16 +41,16 @@ describe(`JuneMonthTable should render customer's may information in tables`, ()
         expect(asFragment()).toMatchSnapshot()
     })
 
-    it('header should be MAY', () => {
+    it('header should be June', () => {
         render(<JuneMonthTable
             sortedJuneTable={sortedJuneTable}
             calculateJuneTotalRewards={calculateJuneTotalRewards}
         />)
-        const headerMay = screen.getByTestId('header-june').textContent
-        expect(headerMay).toBe('JUNE')
+        const headerJune = screen.getByTestId('header-june').textContent
+        expect(headerJune).toBe('JUNE')
     })
 
-    it('there should be 3 TableHeaders in May because there are 3 customers', () => {
+    it('there should be 3 TableHeaders in June because there are 3 customers', () => {
         render(<JuneMonthTable
             sortedJuneTable={sortedJuneTable}
             calculateJuneTotalRewards={calculateJuneTotalRewards}
@@ -63,7 +63,7 @@ describe(`JuneMonthTable should render customer's may information in tables`, ()
         expect(screen.getAllByTestId('th-rewards').length).toEqual(3)
     })
 
-    it('total for customer 123 should be 1009', () => {
+    it('total for customer 123 should be 0', () => {
         render(<JuneMonthTable
             sortedJuneTable={sortedJuneTable}
             calculateJuneTotalRewards={calculateJuneTotalRewards}
@@ -72,7 +72,7 @@ describe(`JuneMonthTable should render customer's may information in tables`, ()
         expect(customer123Total).toBe('0')
     })
 
-    it('total for customer 456 should be 100', () => {
+    it('total for customer 456 should be 35', () => {
         render(<JuneMonthTable
             sortedJuneTable={sortedJuneTable}
             calculateJuneTotalRewards={calculateJuneTotalRewards}
@@ -81,7 +81,7 @@ describe(`JuneMonthTable should render customer's may information in tables`, ()
         expect(customer456Total).toBe('35')
     })
 
-    it('total for customer 789 should be 2512', () => {
+    it('total for customer 789 should be 50', () => {
         render(<JuneMonthTable
             sortedJuneTable={sortedJuneTable}
             calculateJuneTotalRewards={calculateJuneTotalRewards}

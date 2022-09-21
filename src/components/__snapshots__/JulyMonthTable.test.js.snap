@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`JuneMonthTable should render customer's June information in tables should match snapshot 1`] = `
+exports[`JulyMonthTable should render customer's july information in tables should match snapshot 1`] = `
 <DocumentFragment>
   <div>
     <h1
-      data-testid="header-june"
+      data-testid="header-july"
     >
-      JUNE
+      JULY
     </h1>
     <table
       border="1"
@@ -46,16 +46,16 @@ exports[`JuneMonthTable should render customer's June information in tables shou
             123
           </td>
           <td>
-            7
+            1
           </td>
           <td>
-            Tue Jun 14 2022
+            Fri Jul 01 2022
           </td>
           <td>
-            $50
+            $890
           </td>
           <td>
-            0
+            1630
           </td>
         </tr>
         <tr>
@@ -71,7 +71,7 @@ exports[`JuneMonthTable should render customer's June information in tables shou
           >
             <b>
               <i>
-                0
+                1630
               </i>
             </b>
           </td>
@@ -116,33 +116,16 @@ exports[`JuneMonthTable should render customer's June information in tables shou
             456
           </td>
           <td>
-            11
+            8
           </td>
           <td>
-            Wed Jun 15 2022
+            Fri Jul 15 2022
           </td>
           <td>
-            $75
+            $203
           </td>
           <td>
-            25
-          </td>
-        </tr>
-        <tr>
-          <td>
-            456
-          </td>
-          <td>
-            2
-          </td>
-          <td>
-            Sun Jun 19 2022
-          </td>
-          <td>
-            $60
-          </td>
-          <td>
-            10
+            256
           </td>
         </tr>
         <tr>
@@ -158,7 +141,7 @@ exports[`JuneMonthTable should render customer's June information in tables shou
           >
             <b>
               <i>
-                35
+                256
               </i>
             </b>
           </td>
@@ -203,16 +186,33 @@ exports[`JuneMonthTable should render customer's June information in tables shou
             789
           </td>
           <td>
-            6
+            12
           </td>
           <td>
-            Sat Jun 25 2022
+            Thu Jul 14 2022
           </td>
           <td>
-            $100
+            $89
           </td>
           <td>
-            50
+            39
+          </td>
+        </tr>
+        <tr>
+          <td>
+            789
+          </td>
+          <td>
+            9
+          </td>
+          <td>
+            Mon Jul 25 2022
+          </td>
+          <td>
+            $126
+          </td>
+          <td>
+            102
           </td>
         </tr>
         <tr>
@@ -228,7 +228,7 @@ exports[`JuneMonthTable should render customer's June information in tables shou
           >
             <b>
               <i>
-                50
+                141
               </i>
             </b>
           </td>
