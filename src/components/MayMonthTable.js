@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function MayMonthTable({ sortedMayTable, calculateMayTotalRewards }) {
     return (
-        <div  >
+        <div>
             <h1>MAY</h1>
             {/* customer 123 */}
             <table border="1"  >

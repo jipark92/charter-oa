@@ -11,7 +11,7 @@ export const calculateRewardPoints = (price) => {
     }
 }
 
-const transactionMockData = [
+export const transactionMockData = [
     {
         transactionID: 1,
         customerID: 123,
