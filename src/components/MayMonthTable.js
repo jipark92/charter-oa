@@ -4,6 +4,7 @@ export default function MayMonthTable({ sortedMayTable, calculateMayTotalRewards
     return (
         <div>
             <h1 data-testid='header-may'>MAY</h1>
+
             {/* customer 123 */}
             <table border="1"  >
                 <thead >

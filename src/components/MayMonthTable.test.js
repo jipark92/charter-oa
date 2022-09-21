@@ -3,7 +3,6 @@ import '@testing-library/jest-dom';
 import MayMonthTable from "./MayMonthTable";
 import { transactionMockData } from '../mockdata/transactionMockData'
 
-
 //categorized table array
 const mayTable = []
 
@@ -38,6 +37,7 @@ describe(`MayMonthTable should render customer's May information in tables`, () 
             sortedMayTable={sortedMayTable}
             calculateMayTotalRewards={calculateMayTotalRewards}
         />)
+
         expect(asFragment()).toMatchSnapshot()
     })
 
@@ -46,6 +46,7 @@ describe(`MayMonthTable should render customer's May information in tables`, () 
             sortedMayTable={sortedMayTable}
             calculateMayTotalRewards={calculateMayTotalRewards}
         />)
+
         const headerMay = screen.getByTestId('header-may').textContent
         expect(headerMay).toBe('MAY')
     })
@@ -68,6 +69,7 @@ describe(`MayMonthTable should render customer's May information in tables`, () 
             sortedMayTable={sortedMayTable}
             calculateMayTotalRewards={calculateMayTotalRewards}
         />)
+
         const customer123Total = screen.getByTestId('customer123Total').textContent
         expect(customer123Total).toBe('1009')
     })
@@ -77,6 +79,7 @@ describe(`MayMonthTable should render customer's May information in tables`, () 
             sortedMayTable={sortedMayTable}
             calculateMayTotalRewards={calculateMayTotalRewards}
         />)
+
         const customer456Total = screen.getByTestId('customer456Total').textContent
         expect(customer456Total).toBe('100')
     })
@@ -86,8 +89,20 @@ describe(`MayMonthTable should render customer's May information in tables`, () 
             sortedMayTable={sortedMayTable}
             calculateMayTotalRewards={calculateMayTotalRewards}
         />)
+
         const customer789Total = screen.getByTestId('customer789Total').textContent
         expect(customer789Total).toBe('2512')
+    })
+
+    it('Calculate May Total Function should return expected values', () => {
+        const cust123TotalRewardValue = calculateMayTotalRewards(123)
+        expect(cust123TotalRewardValue).toEqual(1009)
+
+        const cust456TotalRewardValue = calculateMayTotalRewards(456)
+        expect(cust456TotalRewardValue).toEqual(100)
+
+        const cust789TotalRewardValue = calculateMayTotalRewards(789)
+        expect(cust789TotalRewardValue).toEqual(2512)
     })
 
 })

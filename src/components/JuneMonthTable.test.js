@@ -68,6 +68,7 @@ describe(`JuneMonthTable should render customer's June information in tables`, (
             sortedJuneTable={sortedJuneTable}
             calculateJuneTotalRewards={calculateJuneTotalRewards}
         />)
+
         const customer123Total = screen.getByTestId('customer123Total').textContent
         expect(customer123Total).toBe('0')
     })
@@ -77,6 +78,7 @@ describe(`JuneMonthTable should render customer's June information in tables`, (
             sortedJuneTable={sortedJuneTable}
             calculateJuneTotalRewards={calculateJuneTotalRewards}
         />)
+
         const customer456Total = screen.getByTestId('customer456Total').textContent
         expect(customer456Total).toBe('35')
     })
@@ -86,9 +88,20 @@ describe(`JuneMonthTable should render customer's June information in tables`, (
             sortedJuneTable={sortedJuneTable}
             calculateJuneTotalRewards={calculateJuneTotalRewards}
         />)
+
         const customer789Total = screen.getByTestId('customer789Total').textContent
         expect(customer789Total).toBe('50')
     })
 
+    it('Calculate June Total Function should return expected values', () => {
+        const cust123TotalRewardValue = calculateJuneTotalRewards(123)
+        expect(cust123TotalRewardValue).toEqual(0)
+
+        const cust456TotalRewardValue = calculateJuneTotalRewards(456)
+        expect(cust456TotalRewardValue).toEqual(35)
+
+        const cust789TotalRewardValue = calculateJuneTotalRewards(789)
+        expect(cust789TotalRewardValue).toEqual(50)
+    })
 
 })

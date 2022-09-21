@@ -4,6 +4,7 @@ export default function JuneMonthTable({ sortedJuneTable, calculateJuneTotalRewa
     return (
         <div>
             <h1 data-testid='header-june'>JUNE</h1>
+
             {/* customer 123 */}
             <table border="1">
                 <thead>

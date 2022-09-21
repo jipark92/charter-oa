@@ -2,6 +2,7 @@ import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { transactionMockData } from '../mockdata/transactionMockData'
 import JulyMonthTable from './JulyMonthTable';
+
 //categorized table array
 const julyTable = []
 
@@ -27,6 +28,7 @@ const calculateJulyTotalRewards = (customer) => {
         return total + pointsArr
     }, 0)
 }
+
 //test
 describe(`JulyMonthTable should render customer's July information in tables`, () => {
 
@@ -35,6 +37,7 @@ describe(`JulyMonthTable should render customer's July information in tables`, (
             sortedJulyTable={sortedJulyTable}
             calculateJulyTotalRewards={calculateJulyTotalRewards}
         />)
+
         expect(asFragment()).toMatchSnapshot()
     })
 
@@ -43,6 +46,7 @@ describe(`JulyMonthTable should render customer's July information in tables`, (
             sortedJulyTable={sortedJulyTable}
             calculateJulyTotalRewards={calculateJulyTotalRewards}
         />)
+
         const headerJuly = screen.getByTestId('header-july').textContent
         expect(headerJuly).toBe('JULY')
     })
@@ -65,6 +69,7 @@ describe(`JulyMonthTable should render customer's July information in tables`, (
             sortedJulyTable={sortedJulyTable}
             calculateJulyTotalRewards={calculateJulyTotalRewards}
         />)
+
         const customer123Total = screen.getByTestId('customer123Total').textContent
         expect(customer123Total).toBe('1630')
     })
@@ -74,6 +79,7 @@ describe(`JulyMonthTable should render customer's July information in tables`, (
             sortedJulyTable={sortedJulyTable}
             calculateJulyTotalRewards={calculateJulyTotalRewards}
         />)
+
         const customer456Total = screen.getByTestId('customer456Total').textContent
         expect(customer456Total).toBe('256')
     })
@@ -83,9 +89,20 @@ describe(`JulyMonthTable should render customer's July information in tables`, (
             sortedJulyTable={sortedJulyTable}
             calculateJulyTotalRewards={calculateJulyTotalRewards}
         />)
+
         const customer789Total = screen.getByTestId('customer789Total').textContent
         expect(customer789Total).toBe('141')
     })
 
+    it('Calculate July Total Function should return expected values', () => {
+        const cust123TotalRewardValue = calculateJulyTotalRewards(123)
+        expect(cust123TotalRewardValue).toEqual(1630)
+
+        const cust456TotalRewardValue = calculateJulyTotalRewards(456)
+        expect(cust456TotalRewardValue).toEqual(256)
+
+        const cust789TotalRewardValue = calculateJulyTotalRewards(789)
+        expect(cust789TotalRewardValue).toEqual(141)
+    })
 
 })

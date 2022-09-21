@@ -3,7 +3,7 @@ import { calculateRewardPoints } from './transactionMockData';
 
 
 describe('transaction mock data reward calculator functions', () => {
-    it('calculateRewardPoints should return expected rewards', () => {
+    it('calculateRewardPoints should return expected values', () => {
 
         const moreThan100 = calculateRewardPoints(101)
         expect(moreThan100).toBe(52)

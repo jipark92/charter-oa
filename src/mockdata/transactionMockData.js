@@ -11,6 +11,7 @@ export const calculateRewardPoints = (price) => {
     }
 }
 
+//mock data
 export const transactionMockData = [
     {
         transactionID: 1,
@@ -47,7 +48,6 @@ export const transactionMockData = [
         rewardPoints: calculateRewardPoints(125),
         purchasedDate: new Date("May 11, 22 ").toDateString(),
     },
-    //
     {
         transactionID: 6,
         customerID: 789,

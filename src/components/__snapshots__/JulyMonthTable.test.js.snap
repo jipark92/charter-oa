@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`JulyMonthTable should render customer's july information in tables should match snapshot 1`] = `
+exports[`JulyMonthTable should render customer's July information in tables should match snapshot 1`] = `
 <DocumentFragment>
   <div>
     <h1

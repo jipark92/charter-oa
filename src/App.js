@@ -56,6 +56,7 @@ function App() {
       return total + pointsArr
     }, 0)
   }
+
   //calcualte june total reward points
   const calculateJuneTotalRewards = (customer) => {
     const juneRewardPointsArr = []
@@ -68,6 +69,7 @@ function App() {
       return total + pointsArr
     }, 0)
   }
+
   //calcualte july total reward points
   const calculateJulyTotalRewards = (customer) => {
     const julyRewardPointsArr = []
