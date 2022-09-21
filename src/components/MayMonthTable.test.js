@@ -3,6 +3,8 @@ import '@testing-library/jest-dom';
 import MayMonthTable from "./MayMonthTable";
 import { transactionMockData } from '../mockdata/transactionMockData'
 
+//Type Error: Cannot read properties of null (reading: useState)
+//so moved the functions in here.
 //categorized table array
 const mayTable = []
 
@@ -29,6 +31,7 @@ const calculateMayTotalRewards = (customer) => {
     }, 0)
 }
 
+//test
 describe(`MayMonthTable should render customer's may information in tables`, () => {
 
     it('should match snapshot', () => {
@@ -48,22 +51,45 @@ describe(`MayMonthTable should render customer's may information in tables`, () 
         expect(headerMay).toBe('MAY')
     })
 
-    it('table header should be customerid,transactionid,date,price,rewards', () => {
+    it('there should be 3 TableHeaders in May because there are 3 customers', () => {
         render(<MayMonthTable
             sortedMayTable={sortedMayTable}
             calculateMayTotalRewards={calculateMayTotalRewards}
         />)
-        const thCustomerID = screen.getByTestId('th-customerid').textContent
-        const thTransactionID = screen.getByTestId('th-transactionid').textContent
-        const thDate = screen.getByTestId('th-date').textContent
-        const thPrice = screen.getByTestId('th-price').textContent
-        const thRewards = screen.getByTestId('th-rewards').textContent
 
-        expect(thCustomerID).toBe('Customer ID')
-        expect(thTransactionID).toBe('Transaction ID')
-        expect(thDate).toBe('Date')
-        expect(thPrice).toBe('Price')
-        expect(thRewards).toBe('Rewards')
+        expect(screen.getAllByTestId('th-customerid').length).toEqual(3)
+        expect(screen.getAllByTestId('th-transactionid').length).toEqual(3)
+        expect(screen.getAllByTestId('th-date').length).toEqual(3)
+        expect(screen.getAllByTestId('th-price').length).toEqual(3)
+        expect(screen.getAllByTestId('th-rewards').length).toEqual(3)
     })
+
+    it('total for customer 123 should be 1009', () => {
+        render(<MayMonthTable
+            sortedMayTable={sortedMayTable}
+            calculateMayTotalRewards={calculateMayTotalRewards}
+        />)
+        const customer123Total = screen.getByTestId('customer123Total').textContent
+        expect(customer123Total).toBe('1009')
+    })
+
+    it('total for customer 456 should be 100', () => {
+        render(<MayMonthTable
+            sortedMayTable={sortedMayTable}
+            calculateMayTotalRewards={calculateMayTotalRewards}
+        />)
+        const customer456Total = screen.getByTestId('customer456Total').textContent
+        expect(customer456Total).toBe('100')
+    })
+
+    it('total for customer 789 should be 2512', () => {
+        render(<MayMonthTable
+            sortedMayTable={sortedMayTable}
+            calculateMayTotalRewards={calculateMayTotalRewards}
+        />)
+        const customer789Total = screen.getByTestId('customer789Total').textContent
+        expect(customer789Total).toBe('2512')
+    })
+
 
 })

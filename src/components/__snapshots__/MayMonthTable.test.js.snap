@@ -100,7 +100,9 @@ exports[`MayMonthTable should render customer's may information in tables should
               TOTAL REWARDS
             </b>
           </td>
-          <td>
+          <td
+            data-testid="customer123Total"
+          >
             <b>
               <i>
                 1009
@@ -115,19 +117,29 @@ exports[`MayMonthTable should render customer's may information in tables should
     >
       <thead>
         <tr>
-          <th>
+          <th
+            data-testid="th-customerid"
+          >
             Customer ID
           </th>
-          <th>
+          <th
+            data-testid="th-transactionid"
+          >
             Transaction ID
           </th>
-          <th>
+          <th
+            data-testid="th-date"
+          >
             Date
           </th>
-          <th>
+          <th
+            data-testid="th-price"
+          >
             Price
           </th>
-          <th>
+          <th
+            data-testid="th-rewards"
+          >
             Rewards
           </th>
         </tr>
@@ -158,7 +170,9 @@ exports[`MayMonthTable should render customer's may information in tables should
               TOTAL REWARDS
             </b>
           </td>
-          <td>
+          <td
+            data-testid="customer456Total"
+          >
             <b>
               <i>
                 100
@@ -173,19 +187,29 @@ exports[`MayMonthTable should render customer's may information in tables should
     >
       <thead>
         <tr>
-          <th>
+          <th
+            data-testid="th-customerid"
+          >
             Customer ID
           </th>
-          <th>
+          <th
+            data-testid="th-transactionid"
+          >
             Transaction ID
           </th>
-          <th>
+          <th
+            data-testid="th-date"
+          >
             Date
           </th>
-          <th>
+          <th
+            data-testid="th-price"
+          >
             Price
           </th>
-          <th>
+          <th
+            data-testid="th-rewards"
+          >
             Rewards
           </th>
         </tr>
@@ -233,7 +257,9 @@ exports[`MayMonthTable should render customer's may information in tables should
               TOTAL REWARDS
             </b>
           </td>
-          <td>
+          <td
+            data-testid="customer789Total"
+          >
             <b>
               <i>
                 2512
