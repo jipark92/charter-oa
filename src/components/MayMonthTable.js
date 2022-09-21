@@ -3,16 +3,16 @@ import React from 'react'
 export default function MayMonthTable({ sortedMayTable, calculateMayTotalRewards }) {
     return (
         <div>
-            <h1>MAY</h1>
+            <h1 data-testid='header-may'>MAY</h1>
             {/* customer 123 */}
             <table border="1"  >
                 <thead >
                     <tr>
-                        <th>Customer ID</th>
-                        <th>Transaction ID</th>
-                        <th>Date</th>
-                        <th>Price</th>
-                        <th>Rewards</th>
+                        <th data-testid='th-customerid'>Customer ID</th>
+                        <th data-testid='th-transactionid'>Transaction ID</th>
+                        <th data-testid='th-date'>Date</th>
+                        <th data-testid='th-price'>Price</th>
+                        <th data-testid='th-rewards'>Rewards</th>
                     </tr>
                 </thead>
                 <tbody>

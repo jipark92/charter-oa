@@ -3,7 +3,9 @@
 exports[`MayMonthTable should render customer's may information in tables should match snapshot 1`] = `
 <DocumentFragment>
   <div>
-    <h1>
+    <h1
+      data-testid="header-may"
+    >
       MAY
     </h1>
     <table
@@ -11,19 +13,29 @@ exports[`MayMonthTable should render customer's may information in tables should
     >
       <thead>
         <tr>
-          <th>
+          <th
+            data-testid="th-customerid"
+          >
             Customer ID
           </th>
-          <th>
+          <th
+            data-testid="th-transactionid"
+          >
             Transaction ID
           </th>
-          <th>
+          <th
+            data-testid="th-date"
+          >
             Date
           </th>
-          <th>
+          <th
+            data-testid="th-price"
+          >
             Price
           </th>
-          <th>
+          <th
+            data-testid="th-rewards"
+          >
             Rewards
           </th>
         </tr>
